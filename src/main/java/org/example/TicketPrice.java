@@ -15,7 +15,7 @@ public class TicketPrice {
                 return getDEFAULT_PRICE() * (1 - discount);
             } else {
                 double tmp = (getDEFAULT_PRICE() * (1 - discount)) * (1 + increase);
-                return Math.round(tmp);
+                return Math.round(tmp / 1000) * 1000;
             }
         //13 - 59
         } else if (age <= 59) {
@@ -32,7 +32,7 @@ public class TicketPrice {
                 return getDEFAULT_PRICE() * (1 - discount);
             } else {
                 double tmp = (getDEFAULT_PRICE() * (1 - discount)) * (1 + increase);
-                return Math.round(tmp);
+                return Math.round(tmp / 1000) * 1000;
             }
         }
     }
